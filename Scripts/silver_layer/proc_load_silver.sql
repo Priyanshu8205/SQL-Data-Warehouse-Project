@@ -14,10 +14,9 @@ Parameters:
 	  This stored procedure does not accept any parameters or return any values.
 
 Usage Example:
-    EXEC Silver.load_silver;
+    */EXEC Silver.load_silver;
 ===============================================================================
 */
-
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
     DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME; 
@@ -111,12 +110,12 @@ BEGIN
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
 
-        -- Loading crm_sales_details
+        -- Loading crm_sales_info
         SET @start_time = GETDATE();
-		PRINT '>> Truncating Table: silver.crm_sales_details';
-		TRUNCATE TABLE silver.crm_sales_details;
-		PRINT '>> Inserting Data Into: silver.crm_sales_details';
-		INSERT INTO silver.crm_sales_details (
+		PRINT '>> Truncating Table: silver.crm_sales_info';
+		TRUNCATE TABLE silver.crm_sales_info;
+		PRINT '>> Inserting Data Into: silver.crm_sales_info';
+		INSERT INTO silver.crm_sales_info (
 			sls_ord_num,
 			sls_prd_key,
 			sls_cust_id,
@@ -154,7 +153,7 @@ BEGIN
 					THEN sls_sales / NULLIF(sls_quantity, 0)
 				ELSE sls_price  -- Derive price if original value is invalid
 			END AS sls_price
-		FROM bronze.crm_sales_details;
+		FROM bronze.crm_sales_info;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
