@@ -173,4 +173,4 @@ See the [LICENSE](LICENSE) file for the full license text.
 
 BBA Student
 
-**Skills:** • SQL Server • Excel
+**Skills:** • SQL Server • Excel • Python • Power BI • Tableau • Graphic Designer
