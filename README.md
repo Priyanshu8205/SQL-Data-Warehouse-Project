@@ -43,6 +43,18 @@ CSV Files
        ▼
  Analytics & BI
 ```
+🗄️ Data Warehouse
+
+The final warehouse follows a Star Schema consisting of:
+
+Dimension Tables
+dim_customer
+dim_product
+dim_date
+
+## Fact Tables
+
+fact_sales
 
 ## 🔄 ETL Process
 
