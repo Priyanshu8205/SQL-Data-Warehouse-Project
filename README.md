@@ -44,30 +44,6 @@ CSV Files
  Analytics & BI
 ```
 
-## 📂 Dataset
-
-The project is based on three main CSV files:
-
-| Dataset             | Description               |
-| ------------------- | ------------------------- |
-| `cust_info.csv`     | Customer information      |
-| `prd_info.csv`      | Product information       |
-| `sales_details.csv` | Sales transaction details |
-
-## 🗄️ Data Warehouse
-
-The final warehouse follows a **Star Schema** consisting of:
-
-### Dimension Tables
-
-* `dim_customer`
-* `dim_product`
-* `dim_date`
-
-### Fact Tables
-
-* `fact_sales`
-
 ## 🔄 ETL Process
 
 ### Extract
@@ -123,28 +99,6 @@ The warehouse can be used to analyze:
 * **CSV**
 * **Git & GitHub**
 * **Power BI** *(optional)*
-
-## 📁 Repository Structure
-
-```text
-data-warehouse-project/
-│
-├── datasets/
-│   ├── cust_info.csv
-│   ├── prd_info.csv
-│   └── sales_details.csv
-│
-├── scripts/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
-│
-├── tests/
-│
-├── docs/
-│
-└── README.md
-```
 
 ## 🎯 Project Goals
 
