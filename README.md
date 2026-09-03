@@ -159,6 +159,14 @@ The primary goal of this project is to demonstrate practical knowledge of:
 * Analytical SQL
 * Business Intelligence
 
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the project, subject to the conditions of the MIT License.
+
+See the [LICENSE](LICENSE) file for the full license text.
+
 ## 👨‍💻 Author
 
 **Priyanshu**
