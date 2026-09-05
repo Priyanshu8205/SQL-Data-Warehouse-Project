@@ -80,13 +80,13 @@ FROM silver.crm_prd_info
 WHERE prd_end_dt < prd_start_dt;
 
 -- ====================================================================
--- Checking 'silver.crm_sales_details'
+-- Checking 'silver.crm_sales_info'
 -- ====================================================================
 -- Check for Invalid Dates
 -- Expectation: No Invalid Dates
 SELECT 
     NULLIF(sls_due_dt, 0) AS sls_due_dt 
-FROM bronze.crm_sales_details
+FROM bronze.crm_sales_info
 WHERE sls_due_dt <= 0 
     OR LEN(sls_due_dt) != 8 
     OR sls_due_dt > 20500101 
@@ -96,7 +96,7 @@ WHERE sls_due_dt <= 0
 -- Expectation: No Results
 SELECT 
     * 
-FROM silver.crm_sales_details
+FROM silver.crm_sales_info
 WHERE sls_order_dt > sls_ship_dt 
    OR sls_order_dt > sls_due_dt;
 
@@ -106,7 +106,7 @@ SELECT DISTINCT
     sls_sales,
     sls_quantity,
     sls_price 
-FROM silver.crm_sales_details
+FROM silver.crm_sales_info
 WHERE sls_sales != sls_quantity * sls_price
    OR sls_sales IS NULL 
    OR sls_quantity IS NULL 
