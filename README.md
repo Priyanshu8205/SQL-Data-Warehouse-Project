@@ -50,7 +50,6 @@ The final warehouse follows a Star Schema consisting of:
 Dimension Tables
 dim_customer
 dim_product
-dim_date
 
 ## Fact Tables
 
@@ -110,7 +109,6 @@ The warehouse can be used to analyze:
 * **SSMS**
 * **CSV**
 * **Git & GitHub**
-* **Power BI** *(optional)*
 
 ## 🎯 Project Goals
 
@@ -139,4 +137,4 @@ See the [LICENSE](LICENSE) file for the full license text.
 
 BBA Student
 
-**Skills:** • SQL Server • Excel • Python • Power BI • Tableau • Graphic Designer
+**Skills:** • SQL Server • Excel • Python • Power BI 
